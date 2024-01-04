@@ -6,7 +6,7 @@ q = float(input("Enter Probablity of Losing:"))
 float(b)
 float(p)
 float(q)
-float(odds)
+
 Result = (((float(b)*float(p))-float(q))/float(b))
 
 Result = Result*100
