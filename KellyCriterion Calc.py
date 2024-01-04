@@ -1,23 +1,15 @@
  
-b = input("Enter Coefficient:")
-p = input("Enter Probablity of Winning:")
-q = input("Enter Probablity of Losing:")
-odds = input("Enter Current Odds of Bet:")
+b = float(input("Enter Coefficient:"))
+p = float(input("Enter Probablity of Winning:"))
+q = float(input("Enter Probablity of Losing:"))
+
 float(b)
 float(p)
 float(q)
 float(odds)
 Result = (((float(b)*float(p))-float(q))/float(b))
 
+Result = Result*100
 
-
-if float(odds) > 0:
-    Probablity = 100/(odds+100)*100
-    
-else:
-    abs(odds)   
-    Probablity = odds/(odds+100)*100
-
-print("This is the Implied Probablity for these Odds" + odds)
-
+print("Kelly Criterion suggests:")
 print(Result)
