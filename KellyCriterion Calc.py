@@ -12,4 +12,4 @@ Result = (((float(b)*float(p))-float(q))/float(b))
 Result = Result*100
 
 print("Kelly Criterion suggests:")
-print(Result + "Of your current bankroll to be used on this bet.")
+print(str(Result) + "Of your current bankroll to be used on this bet.")
