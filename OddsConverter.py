@@ -7,3 +7,11 @@ if a < 0:
 else:
     odds = 100/(100+a)
     print(odds)
+
+def Odds(a):
+    odds = 0
+    if a < 0:
+        odds = (-a)/(-a+100)
+    else:
+        odds = 100/(100+a)
+        
