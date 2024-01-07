@@ -13,3 +13,6 @@ def OffensiveEffiency(TotalPoints, NumOfPosessions):
 def DefensiveEffiency(PointsAgainst,NumOfPosessions):
     DefensiveEffiency = PointsAgainst/NumOfPosessions
     return DefensiveEffiency
+def EffiencyMargin(OffensiveEffiency,DefensiveEffiency):
+    EffiencyMargin = OffensiveEffiency - DefensiveEffiency
+    return EffiencyMargin
