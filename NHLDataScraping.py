@@ -1,7 +1,4 @@
-from nhlpy import NHLClient
-from nhlpy import Teams
-
-client = NHLClient()
-golden_knights = Teams.Team(54)
+from nhlpy import team
+golden_knights = team.Team(50)
 print(golden_knights.stats())
 
