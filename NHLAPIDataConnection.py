@@ -9,5 +9,25 @@ def ConnectionCheck(): ## Check Connection of the NHL API
     return team_response
 
 
-def PullSchedule(date):
-    team_Url = 
+def PullSchedule(date): ## Pulling the schedule based on the date, date must be in YYYY-MM-DD Format 
+    team_Url = 'https://api-web.nhle.com/v1/schedule'+ date
+    team_response = requests.get(team_Url)
+    print(team_Url)
+    return team_response
+
+
+def PullTodaySchedule(): ##Pulling Today's Schedule  
+    team_Url = 'https://api-web.nhle.com/v1/schedule/now'
+    team_response = requests.get(team_Url)
+    return team_response
+
+
+def FullTeamStats(Team): ##Pulling Full Team Stats by Season need Team Abbreviation 
+    team_Url = 'https://api-web.nhle.com/v1/club-stats-season/'+ Team
+    team_response = requests.get(team_Url)
+    return team_response
+
+def GetOdds(): ##Getting Odds from partner
+    URL= 'https://api-web.nhle.com/v1/partner-game/US/now'
+    team_response = requests.get(URL)
+    return team_response
