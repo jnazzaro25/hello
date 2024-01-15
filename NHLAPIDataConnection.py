@@ -30,5 +30,5 @@ def FullTeamStats(Team): ##Pulling Full Team Stats by Season need Team Abbreviat
 def GetOdds(): ##Getting Odds from partner
     URL= 'https://api-web.nhle.com/v1/partner-game/US/now'
     team_response = requests.get(URL)
-    team_response= team_response.content
+    team_response = json.loads(team_response.content)
     return team_response
