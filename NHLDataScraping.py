@@ -7,4 +7,6 @@ URL= 'https://api-web.nhle.com/v1/partner-game/US/now'
 team_response = requests.get(URL)
 team_response = json.loads(team_response.content)
 
-print(team_response)
+Dataframe_Team_Content = pd.DataFrame(team_response['games'])
+Dataframe_Team_Content.head()
+
